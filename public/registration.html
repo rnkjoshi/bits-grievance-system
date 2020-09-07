@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Registration</title>
+	<meta
+      name="description"
+      content="Bits Educampus Grievance Portal Designed by TEAM EnIgma."
+    />
+    <meta
+      name="keywords"
+      content="bits,bits Educampus, bits portal, bits Grievance,Grievance system,bits Grievance system"
+    />
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|Raleway" rel="stylesheet">
+	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
+ 	<link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <!-- Main CSS-->
+    <link href="css/registration.css" rel="stylesheet" media="all">
+	<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+
+
+	<style type="text/css">
+		
+
+		.errorMsg {
+			display: none;
+			color: red;
+		}
+	</style>
+</head>
+
+<body id="top" data-spy="scroll">
+	<header id="registration">
+
+		<section class="top-nav hidden-xs">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="top-left">
+
+							<ul>
+								<li><a href="https://www.facebook.com/babaria.institute/"><i class="fa fa-facebook"
+											aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+								<li><a
+										href="https://www.youtube.com/channel/UCpnW4eginLfg2rCcMjAn5dA?view_as=subscriber"><i
+											class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+								<li><a
+										href="https://www.instagram.com/bits.edu.campus_official/?utm_source=ig_profile_share&igshid=15s3hwp5s8tp8"><i
+											class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							</ul>
+
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="top-right">
+							<p>Location:<span>Mumbai-Vadodara National highway</span></p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!--main-nav-->
+
+		<div id="main-nav">
+
+			<nav class="navbar">
+				<div class="container">
+					<div class="navbar-header">
+						<div class="newlogo">
+							<a href="index.html"><img src="images/logo.jpg" id="logo1"></a>
+						</div>
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+							data-target="#ftheme">
+							<span class="sr-only">T</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="navbar-collapse collapse" id="ftheme">
+
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="index.html#about">About</a></li>
+							<li><a href="registration.html">register</a></li>
+							<li><a href="index.html#gotologin">Login</a></li>
+							<li><a href="index.html#gotocontact">Contact</a></li>
+							<li class="hidden-sm hidden-xs">
+								<a href="#" id="ss"><i class="fa fa-search" aria-hidden="true"></i></a>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+			</nav>
+		</div>
+
+	</header>
+	<div class="back">
+		<div class="register">
+				<h1>Why Register yourself ?</h2>
+				<h4>Because as you all have to be in this institute for 4 years...It's your soul duty to inform the management about the problems students are facing in the campus perimeter. So that everyone in the campus can live a happy and prosperous college life without any problems and can focus on their goals.</h4>
+			</div>
+	<div class="container">
+		<div class="row">
+		<div class="box">
+			<h1> <b>Registration Form </b></h2>
+			<form>
+				<div class="inputBox">
+					<input type="text" name="fname" id="fname" required>
+					<label for="fname">Full Name</label>
+				</div>
+				<span id="errorFnameMsg" class="errorMsg">Invalid name</span>
+
+
+				<div class="inputBox">
+					<input type="text" name="email" id="email" required>
+					<label for="email">Email Id</label>
+				</div>
+				<span id="errorEmailMsg" class="errorMsg">Invalid email</span>
+				<span id="errorUserMsg" class="errorMsg">User already exists</span>
+				<div class="inputBox">
+					<input type="text" name="mobile" id="mobile" required>
+					<label for="mobile">Mobile No</label>
+				</div>
+				<span id="errorMobileMsg" class="errorMsg">Invalid mobile no</span>
+
+				<div class="inputBox">
+					<input type="text" name="address1" id="address1" required>
+					<label for="address1">Address Line 1</label>
+				</div>
+				<div class="inputBox">
+					<input type="text" name="address2" id="address2" required>
+					<label for="address2">Address Line 2</label>
+				</div>
+
+				<div class="inputBox">
+					<input type="text" name="city" id="city" required>
+					<label for="city">City</label>
+				</div>
+
+				<div class="inputBox">
+					<input type="text" name="state" id="state" required>
+					<label for="state">State</label>
+				</div>
+
+				<div class="inputBox">
+					<input type="Password" name="password" id="password" required>
+					<label for="password">Password</label>
+				</div>
+				<span id="errorPasswordMsg" class="errorMsg">Please enter a password</span>
+				<div class="inputBox">
+					<input type="Password" name="confirmPassword" id="confirmPassword" required="">
+					<label for="confirmPassword">Confirm Password</label>
+				</div>
+				<span id="errorConfirmPasswordMsg" class="errorMsg">Passwords didn't match</span>
+				<p>
+						<div class="submit">
+							<button class="btn btn-default" id="submitButton" type="submit">SUBMIT</button>
+						</div>
+					</p>
+			</form>
+		</div>
+	</div>
+	</div>
+</div>
+
+	<!--<center>
+		<div class="form">
+			<p>
+				<h1><b>REGISTRATION FORM</b></h1>
+				<form action="#" id="regForm" method="POST">
+					<table class="reg">
+						<tr>
+							<td><label for="fname">First name</label></td>
+							<td> : </td>
+							<td><input type="text" name="fname" id="fname" placeholder="Enter your first name" required>
+							</td>
+						</tr>
+						<tr>
+							<td id="errorFnameMsg" class="errorMsg">Invalid name</td>
+						</tr>
+						<tr>
+							<td><label for="lname">Last name</label></td>
+							<td> : </td>
+							<td><input type="text" name="lname" id="lname" placeholder="Enter your last name" required>
+							</td>
+						</tr>
+						<tr>
+							<td id="errorLnameMsg" class="errorMsg">Invalid name</td>
+						</tr>
+						<tr>
+							<td><label for="en_no">Enrollment no</label></td>
+							<td> : </td>
+							<td><input type="text" name="en_no" id="en_no" placeholder="Enter your enrollment no"
+									required></td>
+						</tr>
+						<tr>
+							<td id="errorEn_noMsg" class="errorMsg">Invalid en_no</td>
+						</tr>
+						<tr>
+							<td id="errorUserMsg" class="errorMsg">User already exists</td>
+						</tr>
+						<tr>
+							<td><label for="branch">Branch</label></td>
+							<td> : </td>
+							<td><select name="branch" id="branch">
+									<option>Select</option>
+									<option>Computer Science</option>
+									<option>Mechanical</option>
+									<option>Electrical</option>
+									<option>Electronics</option>
+									<option>Civil</option>
+									<option>Pharmacy</option>
+									<option>Physiotherapy</option>
+								</select></td>
+						</tr>
+						<tr>
+							<td id="errorBranchMsg" class="errorMsg">Please select branch</td>
+						</tr>
+						<tr>
+							<td><label for="semester">Semester</label></td>
+							<td> : </td>
+							<td><select name="semester" id="semester">
+									<option>Select</option>
+									<option>I</option>
+									<option>II</option>
+									<option>III</option>
+									<option>IV</option>
+									<option>V</option>
+									<option>VI</option>
+									<option>VII</option>
+									<option>VIII</option>
+								</select></td>
+						</tr>
+						<tr>
+							<td id="errorSemesterMsg" class="errorMsg">Please select semester</td>
+						</tr>
+						<tr>
+							<td><label for="mobile">Mobile no</label></td>
+							<td> : </td>
+							<td><input type="text" name="mobile" id="mobile" placeholder="Eg: +919876543210"
+									required></td>
+						</tr>
+						<tr>
+							<td id="errorMobileMsg" class="errorMsg">Invalid mobile no</td>
+						</tr>
+						<tr>
+							<td><label for="email">Email id</label></td>
+							<td> : </td>
+							<td><input type="text" name="email" id="email" placeholder="Eg: abc@xyz.com" required>
+							</td>
+						</tr>
+						<tr>
+							<td id="errorEmailMsg" class="errorMsg">Invalid email</td>
+						</tr>
+						<tr>
+							<td><label for="password">Password</label></td>
+							<td> : </td>
+							<td><input type="password" name="password" id="password" placeholder="Enter any password"
+									required></td>
+						</tr>
+						<tr>
+								<td id="errorPasswordMsg" class="errorMsg">Please enter a password</td>
+							</tr>
+						<tr>
+							<td><label for="confirmPassword">Confirm password</label></td>
+							<td> : </td>
+							<td><input type="password" name="confirmPassword" id="confirmPassword"
+									placeholder="Re-enter your password" required></td>
+						</tr>
+						<tr>
+							<td id="errorConfirmPasswordMsg" class="errorMsg">Password didn't match</td>
+						</tr>
+					</table>
+					<p>
+						<div class="submit">
+							<button class="btn btn-default" id="submitButton" type="submit">SUBMIT</button>
+						</div>
+					</p>
+				</form>
+	</center>
+	</p>
+	</div>-->
+	<!--footer-->
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="footer-heading">
+						<h3><span>ABOUT US</span></h3>
+						<h4>SHREE KRISHNA EDUCATIONAL TRUST</h4>
+						<img src="images/about/about3.jpg" alt="">
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="footer-heading">
+						<h3><span>NEWS</span></h3>
+						<ul>
+							<li><a href="#">Navratri Celebration</a></li>
+							<li><a href="#">Ganpati Utsav</a></li>
+							<li><a href="#">Aahvan</a></li>
+							<li><a href="#">Xitij-Youth Festival</a></li>
+							<li><a href="#">Sports Week</a></li>
+							<li><a href="#">Project Exhibitions</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="footer-heading">
+						<h3><span>Courses</span> provided</h3>
+						<div class="insta">
+							<ul>
+								<li><a href="https://bitstechnology.org">Engineering</a></li>
+								<ul>
+									<li><a href="https://bitstechnology.org/computer-science-engineering/">Computer
+											Science and Engineering</a></li>
+									<li><a href="https://bitstechnology.org/mechanical-engineering/">Mechanical
+											Engineering</a></li>
+									<li><a href="https://bitstechnology.org/electrical-engineering/">Electrical
+											Engineering</a></li>
+									<li><a href="https://bitstechnology.org/civil-engineering/">Civil Engineering</a>
+									</li>
+									<li><a href="https://bitstechnology.org/electronics-communication/">Electronics and
+											Communication Engineering</a></li>
+								</ul>
+							</ul>
+							<ul>
+								<li><a href="https://bitspharmacy.org/">Pharmacy</a></li>
+								<li><a href="https://bitsphysiotherapy.org/">Physiotherapy</a></li>
+								<li><a href="">BHMS</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--bottom footer-->
+	<div id="bottom-footer" class="hidden-xs">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="footer-left">
+
+						<div class="credits">
+							Designed by <a><br>TEAM EnIgma</a>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-8">
+					<div class="footer-right">
+						<ul class="list-unstyled list-inline pull-right">
+							<li><a href="index.html#home">Home</a></li>
+							<li><a href="index.html#about">About</a></li>
+							<li><a href="registration.html">register</a></li>
+							<li><a href="index.html#gotologin">Login</a></li>
+							<li><a href="index.htmml#gotocontact">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.flexslider.js"></script>
+	<script src="js/jquery.inview.js"></script>
+	<script src="js/script.js"></script>
+	<script src="contactform/contactform.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>
+	<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+	<script src="js/registration.js"></script>
+	<script type="text/javascript">
+
+		function isEmail(email) {
+			var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+			return regex.test(email);
+		}
+		function isName(name) {
+			var regex = /^([a-zA-Z.])+$/;
+			return regex.test(name);
+		}
+		function isMobile(mobile) {
+			var regex = /^\+91+([0-9]{10})$/;
+			return regex.test(mobile);
+		}
+		
+		$(document).ready(function () {
+			$("#submitButton").click(function () {
+				if (isName($("#fname").val()) == false) {
+					$("#errorFnameMsg").show();
+					return false;
+				} else {
+					$("#errorFnameMsg").hide();
+				}
+				if (isEmail($("#email").val()) == false) {
+					$("#errorEmailMsg").show();
+					return false;
+				} else {
+					$("#errorEmailMsg").hide();
+				}
+				if (isMobile($("#mobile").val()) == false) {
+					$("#errorMobileMsg").show();
+					return false;
+				} else {
+					$("#errorMobileMsg").hide();
+				}
+				if($("#password").val() == "") {
+					$("#errorPasswordMsg").show();
+					return false;
+				} else {
+					$("#errorPasswordMsg").hide();
+				}
+				if ($("#password").val() != $("#confirmPassword").val()) {
+					$("#errorConfirmPasswordMsg").show();
+					return false;
+				} else {
+					$("#errorConfirmPasswordMsg").hide();
+				}
+				submitForm();
+				return false;
+			});
+		});
+	</script>
+
+</body>
+
+</html>

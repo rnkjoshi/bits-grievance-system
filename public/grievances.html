@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet">
+		<meta charset="UTF-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Grievances</title>
+		<meta
+	      name="description"
+	      content="Bits Educampus Grievance Portal Designed by TEAM EnIgma."
+	    />
+	    <meta
+	      name="keywords"
+	      content="bits,bits Educampus, bits portal, bits Grievance,Grievance system,bits Grievance system"
+	    />
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|Raleway" rel="stylesheet">
+		<link rel="stylesheet" href="css/flexslider.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- <link rel="stylesheet" href="css/style.css"> -->
+		 <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+		<link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+		<!-- Font special for pages-->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+		<!-- Vendor CSS-->
+		<link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+		<!-- Main CSS-->
+		<link href="css/grievance.css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+		<style type="text/css">
+			
+			.errorMsg {
+				display: none;
+				color: red;
+			}
+			
+
+		</style>
+	</head>
+	<body id="top" data-spy="scroll">
+		<header id="registration">
+
+			<section class="top-nav hidden-xs">
+			  <div class="container">
+				<div class="row">
+				  <div class="col-md-6">
+					<div class="top-left">
+		
+					  <ul>
+						<li><a href="https://www.facebook.com/babaria.institute/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						<li><a href="https://www.youtube.com/channel/UCpnW4eginLfg2rCcMjAn5dA?view_as=subscriber"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+						<li><a href="https://www.instagram.com/bits.edu.campus_official/?utm_source=ig_profile_share&igshid=15s3hwp5s8tp8"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					  </ul>
+		
+					</div>
+				  </div>
+		
+				  <div class="col-md-6">
+					<div class="top-right">
+					  <p>Location:<span>Mumbai-Vadodara National highway</span></p>
+					</div>
+				  </div>
+		
+				</div>
+			  </div>
+			</section>
+		
+			<!--main-nav-->
+		
+			<div id="main-nav">
+		
+			  <nav class="navbar">
+				<div class="container">
+				  <div class="navbar-header">
+					  <div class="newlogo">
+						 <a href="index.html"><img src="images/logo.jpg" id="logo1"></a>
+					</div>
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ftheme">
+					  <span class="sr-only">T</span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					</button>
+				  </div>
+		
+				  <div class="navbar-collapse collapse" id="ftheme">
+		
+					<ul class="nav navbar-nav navbar-right">
+					  <li><a href="index.html">home</a></li>
+					  <li><a href="index.html#about">About</a></li>
+					  <li><a href="registration.html">register</a></li>
+					  <li><a href="index.html#gotologin">login</a></li>
+					  <li><a href="index.html#gotocontact">contact</a></li>
+					  <li class="hidden-sm hidden-xs">
+						<a href="#" id="ss"><i class="fa fa-search" aria-hidden="true"></i></a>
+					  </li>
+					</ul>
+		
+				  </div>
+				</div>
+			  </nav>
+			</div>
+		
+		  </header>
+		  <div class="back">
+			<div class="container">
+		   <div class="row" style="background-image: url(../images/background.jpg);">
+		   <div class="box">
+			   <h1> Grievance Form</h2>
+			   <form>
+				   <div class="inputBox">
+					   <select name="category" id="category">
+						   <option>Category</option>
+						   <option>Complaint</option>
+						   <option>Feedback</option>
+						   <option>Suggestion</option>
+				   </select>
+					   <div class="select-dropdown"></div>
+					</div>
+				   <span id="errorCategoryMsg" class="errorMsg">Please select category</span>
+				   <div class="inputBox">
+					   <input type="text" name="subject" id="subject" required>
+					   <label for="subject">Subject</label>
+				   </div>
+				   <span id="errorSubjectMsg" class="errorMsg">Please mention subject</span>
+				   <div class="inputBox">
+					   <input type="text" name="description" id="description" required>
+					   <label for="description">Description</label>
+				   </div>
+				   <span id="errorDescriptionMsg" class="errorMsg">Please describe your grievance</span>
+				   <p>
+						   <div class="submit">
+							   <button class="btn btn-default" id="submitButton" type="submit">SUBMIT</button>
+						   </div>
+					   </p>
+			   </form>
+		   </div>
+	   </div>
+	   </div>
+	   </div>
+   </div>
+		<!--<center><div class="form"><p><h1><b>GRIEVANCE FORM</b></h1>
+		<form><table class="fillForm">
+				<tr><td><label for="category">Category</label></td><td> : </td>
+				<td><select name="category" id="category">
+						<option>Select</option>
+						<option>Complaint</option>
+						<option>Feedback</option>
+						<option>Suggestion</option>
+				</select></td>
+				</tr>
+				<tr><td id="errorCategoryMsg" class="errorMsg">Please select category</td></tr>
+				<tr><td><label for="subject">Subject</label></td><td> : </td><td><input type="text" name="subject" id="subject" placeholder="Enter any subject" required></td></tr>
+				<tr><td id="errorSubjectMsg" class="errorMsg">Please mention subject</td></tr>
+				<tr><td><label for="description">Description</label></td><td> : </td><td><textarea rows="5" cols="25" name="description" id="description" placeholder="Enter Description" required></textarea></td></tr>
+				<tr><td id="errorDescriptionMsg" class="errorMsg">Please describe your grievance</td></tr>
+			</table>
+		<p><div class="submit">
+              <button class="btn btn-default" type="submit" id="submitButton">SUBMIT</button>
+            </div></p>
+		</form></center> -->
+		<!--footer-->
+		<div id="footer">
+			<div class="container">
+			  <div class="row">
+				<div class="col-md-4">
+				  <div class="footer-heading">
+					<h3><span>ABOUT US</span></h3>
+					<h4>SHREE KRISHNA EDUCATIONAL TRUST</h4>
+					<img src="images/about/about3.jpg" alt="">
+				  </div>
+				</div>
+		
+				<div class="col-md-4">
+				  <div class="footer-heading">
+					<h3><span>NEWS</span></h3>
+					<ul>
+					  <li><a href="#">Navratri Celebration</a></li>
+					  <li><a href="#">Ganpati Utsav</a></li>
+					  <li><a href="#">Aahvan</a></li>
+					  <li><a href="#">Xitij-Youth Festival</a></li>
+					  <li><a href="#">Sports Week</a></li>
+					  <li><a href="#">Project Exhibitions</a></li>
+					</ul>
+				  </div>
+				</div>
+		
+			   <div class="col-md-4">
+				  <div class="footer-heading">
+					<h3><span>Courses</span> provided</h3>
+					<div class="insta">
+					  <ul>
+						<li><a href="https://bitstechnology.org">Engineering</a></li>
+						<ul>
+							<li><a href="https://bitstechnology.org/computer-science-engineering/">Computer Science and Engineering</a></li>
+							<li><a href="https://bitstechnology.org/mechanical-engineering/">Mechanical Engineering</a></li>
+							<li><a href="https://bitstechnology.org/electrical-engineering/">Electrical Engineering</a></li>
+							<li><a href="https://bitstechnology.org/civil-engineering/">Civil Engineering</a></li>
+							<li><a href="https://bitstechnology.org/electronics-communication/">Electronics and Communication Engineering</a></li>
+						</ul>
+					</ul>
+					<ul>
+						<li><a href="https://bitspharmacy.org/">Pharmacy</a></li>
+						<li><a href="https://bitsphysiotherapy.org/">Physiotherapy</a></li>
+						<li><a href="">BHMS</a></li>
+					  </ul>
+					</div>
+				  </div>
+				</div>
+		
+			  </div>
+			</div>
+		</div>
+		
+		<!--bottom footer-->
+			<div id="bottom-footer" class="hidden-xs">
+				<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+					<div class="footer-left">
+						
+						<div class="credits">
+              				Designed by <a><br>TEAM EnIgma</a>
+						</div>
+					</div>
+					</div>
+			
+					<div class="col-md-8">
+					<div class="footer-right">
+						<ul class="list-unstyled list-inline pull-right">
+						<li><a href="index.html#home">Home</a></li>
+						<li><a href="index.html#about">About</a></li>
+						<li><a href="registration.html">register</a></li>
+						<li><a href="index.html#gotologin">Login</a></li>
+						<li><a href="index.html#gotocontact">Contact</a></li>
+						</ul>
+					</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		
+		<!-- jQuery -->
+		<script src="js/jquery.min.js"></script>
+	 	<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.flexslider.js"></script>
+		<script src="js/jquery.inview.js"></script>
+		<script src="js/script.js"></script>
+		<!--script src="contactform/contactform.js"></script-->
+		<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+		  <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-analytics.js"></script>
+		  <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
+		<script src="js/grievances.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+		  	$("#submitButton").click(function() {
+				/*if($.isNumeric($("#en_no").val()) == false || $("#en_no").val().length != 12) {
+					$("#errorEn_noMsg").show();
+					return false;
+				} else {
+					$("#errorEn_noMsg").hide();
+				}*/
+			  	if($("#category").val() == "Category") {
+					$("#errorCategoryMsg").show();
+					return false;
+			  	} else {
+					$("#errorCategoryMsg").hide();
+				}
+				if($("#subject").val() == "") {
+					$("#errorSubjectMsg").show();
+					return false;
+			  	} else {
+					$("#errorSubjectMsg").hide();
+				}
+				if($("#description").val() == "") {
+					$("#errorDescriptionMsg").show();
+					return false;
+			  	} else {
+					$("#errorDescriptionMsg").hide();
+				}
+				submitGrievance();
+				return false;
+			});
+		});
+		</script>
+	</body>
+</html>

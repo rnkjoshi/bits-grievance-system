@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Bits Edu Campus</title>
+  <meta
+      name="description"
+      content="Bits Educampus Grievance Portal Designed by TEAM EnIgma."
+    />
+    <meta
+      name="keywords"
+      content="bits,bits Educampus, bits portal, bits Grievance,Grievance system,bits Grievance system"
+    />
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="css/flexslider.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+</head>
+
+<body id="top" data-spy="scroll">
+  <!--top header-->
+
+  <header id="home">
+
+    <section class="top-nav ">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="top-left">
+
+              <ul>
+                <li><a href="https://www.facebook.com/babaria.institute/"><i class="fa fa-facebook"
+                      aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+<!--                 <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+ -->                <li><a href="https://www.youtube.com/channel/UCpnW4eginLfg2rCcMjAn5dA?view_as=subscriber"><i
+                      class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                <li><a
+                    href="https://www.instagram.com/bits.edu.campus_official/?utm_source=ig_profile_share&igshid=15s3hwp5s8tp8"><i
+                      class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              </ul>
+
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="top-right">
+              <p>Location:<span>Mumbai-Vadodara National highway</span></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!--main-nav-->
+
+    <div id="main-nav">
+
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-header">
+            <div class="newlogo">
+              <a href="index.html"><img src="images/logo.jpg" id="logo1"></a>
+            </div>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ftheme">
+              <span class="sr-only">T</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <div class="navbar-collapse collapse" id="ftheme">
+
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#home">home</a></li>
+              <li><a href="#gotoabout">About</a></li>
+              <li><a href="registration.html">register</a></li>
+              <li><a href="#gotologin">login</a></li>
+              <li><a href="#gotocontact">contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+  </header>
+
+  <!--slider-->
+  <div id="slider" class="flexslider">
+
+    <ul class="slides">
+      <li>
+        <img src="images/slider/slider1.jpg">
+
+      </li>
+      <li>
+        <img src="images/slider/slider2.jpg">
+
+      </li>
+      <li>
+        <img src="images/slider/slider3.jpg">
+
+        <div class="caption">
+          
+
+      </li>
+    </ul>
+  </div>
+  <div id="gotoabout"></div>
+  <!--about-->
+  <div id="about">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+          <div class="about-heading">
+            <h2>about</h2>
+             <h1>Inspired By Excellence & Innovation</h1>
+            <p>BITS Edu Campus established in the year 2004 with only one institute i.e. Babaria Insitute of Technology
+              with a mission to impart world class professional education in the field of Engineering and Technology.
+              Today BITS Edu Campus offers professional education in the field of Mechanical Engineering, Computer
+              Science Engineering, Electrical Engineering, Civil Engineering and Electronics & Communication
+              Engineering. Institute also offers PG programs in the field of Mechanical Engineering and E & C
+              Engineering.
+
+              A lush green campus, with 228 faculty members, trained from reputed institutes and 89 administrative and
+              supporting staff members are committed to impart best technical education to more than 3900 students. The
+              institute is having 6 Academic Departments and equipped with 58 high-tech laboratories and 47 ICT enabled
+              class rooms.
+              <br>
+          		The main motto of establishment of BITS Edu Campus is to mould the students as per the needs of
+                industry and to take up challenges in the rapidly developing multifarious technologies.
+
+                Over a span of 14 Years, the developments at BITS Edu Campus had seen tremendous growth which endorsed
+                the true visionary leadership and profound dedication of Shree Krishna Educational Charitable Trust
+                under the mentorship of Shree Jagdishbhai D Patel.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--about wrapper left-->
+    <div class="container">
+
+      <div class="row">
+        <div class="col-xs-12 hidden-sm col-md-5">
+
+          <div class="about-left">
+            <img src="images/about/about1.jpg" alt="">
+          </div>
+
+        </div>
+
+        <!--about wrapper right-->
+        <div class="col-xs-12 col-md-7">
+          <div class="about-right">
+            <div class="about-right-heading">
+             <h1>Why Grievance System?</h1>
+              <!-- <p>The main motto of establishment of BITS Edu Campus is to mould the students as per the needs of
+                industry and to take up challenges in the rapidly developing multifarious technologies.
+
+                Over a span of 14 Years, the developments at BITS Edu Campus had seen tremendous growth which endorsed
+                the true visionary leadership and profound dedication of Shree Krishna Educational Charitable Trust
+                under the mentorship of Shree Jagdishbhai D Patel.</p>
+
+ -->            <p>
+ 					Grievance procedures are needed to protect students from inconsistent and unfair treatment.Grievance Redressal is a management- and governance-related process used commonly in India. While the term "Grievance Redressal" primarily covers the receipt and processing of complaints from citizens and consumers, a wider definition includes actions taken on any issue raised by them to avail services more effectively.
+ 					This platform is developed to resolve the problems faced by students in college.
+ 					The higher authorities will be briefed to your grievances and action will be taken accordingly.
+			</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="gotologin"></div>
+  </div>
+
+  <!--contact form-->
+  <div id="get-touch1">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+          <div class="get-touch-heading">
+
+            <h2><i class="fa fa-user fa-2x" aria-hidden="true"></i><br>SIGN IN</h2>
+            <p>Tell us who you are!</p>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="row">
+          <div id="sendmessage">You have logged in Successfully. Thank you!</div>
+          <div id="errormessage"></div>
+          <div class="newbox">
+            <form class="form contactForm">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <input type="email" name="email" class="form-control" id="email" placeholder="Your Enrollment Number">
+                  <span id="errorEn_noMsg" class="errorMsg">Please enter correct enrollment number</span>
+                  <span id="errorUserMsg" class="errorMsg">User not found</span>
+                  <div class="validation"></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <input type="Password" name="password" class="form-control" id="Password" placeholder="Password">
+                  <span id="errorPasswordMsg" class="errorMsg">Please enter correct password</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <input type="text" id="verCode" class="form-control" placeholder="Enter otp">
+                  <span id="errorVerCodeMsg" class="errorMsg">Please enter OTP</span>
+                </div>
+              </div>
+              <p>
+                <div id="recaptcha-container"></div>
+              </p> 
+              <div class="submit1">
+                <p><button class="btn btn-default" type="submit" id="genOTPButton">GET OTP</button></p>
+              </div>
+
+              <div class="submit">
+
+                <p><button class="btn btn-default" type="submit" id="loginButton">LOGIN</button></p>
+              </div>
+              <div class="forgot">
+               <p> <button class="btn btn-default" type="submit" id="forgotPassword">Forgot Password</button></p>
+             </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="gotocontact"></div>
+  </div>
+
+
+
+  <!--contact-->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+          <div class="contact-heading">
+            <h2><i class="fa fa-phone" aria-hidden="true"></i><br>Contact</h2>
+
+            <p>TELEPHONE<br>
+              College Phone No. : +91 – 265 – 2303991/2/3<br>
+              Mobile No.: 8238077699
+              <br>FAX<br>
+              Fax No. : +91 – 265 – 2359999
+              <br>EMAIL US<br>
+              <a href="info@bitseducampus.org">info@bitseducampus.org</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d590.8014631944243!2d73.18632860510598!3d22.184613186670774!2m3!1f0!2f39.29843431966097!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x395fc3e15a4fce63%3A0x5f75d8caf42dbaec!2sBITS+Edu+Campus!5e1!3m2!1sen!2sin!4v1516079624726"
+      width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+
+  <!--footer-->
+  <div id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="footer-heading">
+            <h3><span>ABOUT US</span></h3>
+            <h4>SHREE KRISHNA EDUCATIONAL TRUST</h4>
+            <img src="images/about/about3.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="footer-heading">
+            <h3><span>NEWS</span></h3>
+            <ul>
+              <li><a href="#">Navratri Celebration</a></li>
+              <li><a href="#">Ganpati Utsav</a></li>
+              <li><a href="#">Aahvan</a></li>
+              <li><a href="#">Xitij-Youth Festival</a></li>
+              <li><a href="#">Sports Week</a></li>
+              <li><a href="#">Project Exhibitions</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="footer-heading">
+            <h3><span>COURSES PROVIDED</span></h3>
+            <div class="insta">
+              <ul>
+                <li><a href="https://bitstechnology.org">Engineering</a></li>
+                <ul>
+                  <li><a href="https://bitstechnology.org/computer-science-engineering/">Computer Science and
+                      Engineering</a></li>
+                  <li><a href="https://bitstechnology.org/mechanical-engineering/">Mechanical Engineering</a></li>
+                  <li><a href="https://bitstechnology.org/electrical-engineering/">Electrical Engineering</a></li>
+                  <li><a href="https://bitstechnology.org/civil-engineering/">Civil Engineering</a></li>
+                  <li><a href="https://bitstechnology.org/electronics-communication/">Electronics and Communication
+                      Engineering</a></li>
+                </ul>
+              </ul>
+              <ul>
+                <li><a href="https://bitspharmacy.org/">Pharmacy</a></li>
+                <li><a href="https://bitsphysiotherapy.org/">Physiotherapy</a></li>
+                <li><a href="">BHMS</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--bottom footer-->
+  <div id="bottom-footer" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="footer-left">
+
+            <div class="credits">
+             Designed By <a>TEAM EnIgma</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <div class="footer-right">
+            <ul class="list-unstyled list-inline pull-right">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="registration.html">register</a></li>
+              <li><a href="#gotologin">Login</a></li>
+              <li><a href="#gotocontact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.flexslider.js"></script>
+  <script src="js/jquery.inview.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/login.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#genOTPButton").click(function () {
+        // if ($.isNumeric($("#en_no").val()) == false || $("#en_no").val().length != 12 || $("#en_no").val() == "") {
+        //   $("#errorEn_noMsg").show();
+        //   return false;
+        // } else {
+        //   $("#errorEn_noMsg").hide();
+        // }
+        if ($("#Password").val() == "") {
+          $("#errorPasswordMsg").show();
+          return false;
+        } else {
+          $("#errorPasswordMsg").hide();
+          valAndGenOTP();
+          return false;
+        }
+      });
+      $("#loginButton").click(function () {
+        if ($("#email").val() == "Admin") {
+          if ($("#Password").val() == "admin@BITS123") {
+            $("#errorPasswordMsg").hide();
+            var getUserId = document.getElementById("email").value;
+            localStorage.setItem("userId", getUserId);
+            window.location.href = "admin.html";
+            return false;
+          } else {
+            $("#errorPasswordMsg").show();
+            return false;
+          }
+        }
+        // if ($.isNumeric($("#en_no").val()) == false || $("#en_no").val().length != 12 || $("#en_no").val() == "") {
+        //   $("#errorEn_noMsg").show();
+        //   return false;
+        // } else {
+        //   $("#errorEn_noMsg").hide();
+        // }
+        if ($("#Password").val() == "") {
+          $("#errorPasswordMsg").show();
+          return false;
+        } else {
+          $("#errorPasswordMsg").hide();
+        }
+        if ($("#verCode").val() == "") {
+          $("#errorVerCodeMsg").show();
+          return false;
+        } else {
+          $("#errorVerCodeMsg").hide();
+          verifyCode();
+          return false;
+        }
+      });
+      $("#forgotPassword").click(function () {
+        window.location = "resetPassword.html";
+        return false;
+      });
+    });
+
+  </script>
+  <!-- <script src="contactform/contactform.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>Admin</title>
+    <meta
+      name="description"
+      content="Bits Educampus Grievance Portal Designed by TEAM EnIgma."
+    />
+    <meta
+      name="keywords"
+      content="bits,bits Educampus, bits portal, bits Grievance,Grievance system,bits Grievance system"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|Raleway"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/flexslider.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css"
+    />
+    <style tupe="text/scss">
+
+body,html {
+        overflow-x: hidden;
+}
+body {
+  top:0px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  background-color: #fff;
+  font-size: normal;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}
+
+.top-nav {
+  color: #333;
+  line-height: 40px;
+  border-bottom: 1px solid #01b1d7;
+}
+
+/*Top left Menu*/
+.top-left {
+  float: left;
+}
+
+.top-left ul >li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.top-left a {
+  font-size: 16px;
+  color: #333;
+}
+
+.top-left a:hover {
+  color: #01b1d7;
+}
+
+/*Top Right Menu*/
+.top-right {
+  float: right;
+}
+
+.top-right p:before {
+  content: "\f041";
+  font-family: 'FontAwesome';
+  font-size: 16px;
+  color: #01b1d7;
+  margin-right: 10px;
+}
+
+.top-right p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.top-right p > span {
+  margin-left: 5px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+table{
+/*  white-space: nowrap;
+*/  width:310px;
+ table-layout: fixed;
+/*  overflow-x: auto;
+*/  border-collapse:collapse;
+}
+/*.table-table-bordered {
+  background-color: rgba(255,255,255,0.3);
+ }*/
+thead{
+/*  white-space: nowrap;
+*/  word-wrap: break-word;
+  height:300px;
+/*  overflow-x:auto;
+*/  margin-top: 0px;
+  border-collapse:collapse;
+
+/*  background-color: rgba(255,255,255,1.5);
+*/
+ background-color: #25b7c4;
+	}
+th{
+/*  white-space: nowrap;
+/**/  word-wrap: break-word;
+/*  overflow: hidden;
+*/	width: 100px;
+/*  text-overflow: ellipsis;
+*/ padding: 20px 15px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  color: #000;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+td{
+  word-wrap: break-word;
+/*  white-space: nowrap;
+  overflow:hidden;*/
+  width: 100px;
+/*  border-collapse:collapse;
+*/  padding: 15px;
+  text-align: center;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+.custom-control-custom-checkbox{
+	/*margin-left: auto;*/
+	align-self: center;
+	border-color:  #25c481;
+}
+
+/* demo styles */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+table{
+  background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+  background: linear-gradient(to right, #25c481, #25b7c4);
+  font-family: 'Roboto', sans-serif;
+}
+section{
+ /*margin: 50px;*/
+}
+table caption{
+	padding: 0.5em 0;
+}
+@media screen and (max-width: 767px) {
+  table caption {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+} 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+} 
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+
+
+.submit {
+	text-align: center;
+}
+
+.submit .btn {
+	position: absolute;
+	color: #fff;
+	/*top:100%;*/
+	left: 45%;
+	background-color: transparent;
+	text-transform: uppercase;
+	text-decoration: none;
+	box-sizing: border-box;
+	background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+	background-size: 400%;
+	border-radius: 30px;
+}
+
+.submit .btn:hover {
+	animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+	0% {
+		background-position: 0%;
+	}
+
+	100% {
+		background-position: 400%;
+	}
+}
+
+.submit .btn:before {
+	content: '';
+	top: -5px;
+	left: -5px;
+	right: -5px;
+	bottom: -5px;
+	z-index: -1;
+	background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+	background-size: 400%;
+	border-radius: 40%;
+	opacity: 0;
+	transition: 0.2s;
+}
+
+.submit .btn:hover:before {
+	/*filter: blur(20px);*/
+	/*opacity: 1;*/
+	animation: animate 8s linear infinite;
+}
+
+@media screen and (min-width: 320px) and (max-width: 812px) {
+			.submit {
+				text-align: center;
+			}
+
+			.submit .btn {
+				position: absolute;
+				color: #fff;
+				/*top:100%;*/
+				left: 35%;
+				background-color: transparent;
+				text-transform: uppercase;
+				text-decoration: none;
+				box-sizing: border-box;
+				background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+				background-size: 400%;
+				border-radius: 30px;
+			}
+
+			.submit .btn:hover {
+				animation: animate 8s linear infinite;
+			}
+
+			@keyframes animate {
+				0% {
+					background-position: 0%;
+				}
+
+				100% {
+					background-position: 400%;
+				}
+			}
+
+			.submit .btn:before {
+				content: '';
+				top: -5px;
+				left: -5px;
+				right: -5px;
+				bottom: -5px;
+				z-index: -1;
+				background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+				background-size: 400%;
+				border-radius: 40%;
+				opacity: 0;
+				transition: 0.2s;
+			}
+
+			.submit .btn:hover:before {
+				/*filter: blur(20px);*/
+				/*opacity: 1;*/
+				animation: animate 8s linear infinite;
+
+			}
+
+
+		}
+    </style>
+  </head>
+
+  <body id="top" data-spy="scroll">
+    <!--top header-->
+
+    <header id="home">
+      <section class="top-nav ">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="top-left">
+                <ul>
+                <li><a href="https://www.facebook.com/babaria.institute/"><i class="fa fa-facebook"
+                      aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+<!--                 <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+ -->                <li><a href="https://www.youtube.com/channel/UCpnW4eginLfg2rCcMjAn5dA?view_as=subscriber"><i
+                      class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                <li><a
+                    href="https://www.instagram.com/bits.edu.campus_official/?utm_source=ig_profile_share&igshid=15s3hwp5s8tp8"><i
+                      class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="top-right">
+                <p>Location:<span>Mumbai-Vadodara National highway</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--main-nav-->
+
+      <div id="main-nav">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-header">
+              <div class="newlogo">
+                <a href="index.html"><img src="images/logo.jpg" id="logo1"/></a>
+              </div>
+              <button
+                type="button"
+                class="navbar-toggle collapsed"
+                data-toggle="collapse"
+                data-target="#ftheme"
+              >
+                <span class="sr-only">T</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+
+            <div class="navbar-collapse collapse" id="ftheme">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="registration.html">register</a></li>
+                <li><a href="index.html#gotologin">login</a></li>
+                <li><a href="index.html#gotocontact">contact</a></li>
+                <li class="hidden-sm hidden-xs">
+                  <a href="#" id="ss"
+                    ><i class="fa fa-search" aria-hidden="true"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="container" style="padding-bottom: 20px;">
+      <div clss="row" style="padding-bottom: 20px;">
+        <div class="col-xs-12">
+          <h1 style="font-family: 'Josefin Sans', sans-serif; text-align: center ; border-bottom: 1px dashed black;padding-bottom: 10px;">Open Grievances</h1>
+        </div>
+      </div>
+    </div>
+    <!-- Table  -->
+   <div class="container">
+   <div class="row">
+    <div class="col-xs-12">
+    <div style="overflow-x:auto;">
+    <table class="table table-bordered" id="dataTable" cellpadding="0" cellspacing="0" border="0">
+      <!-- Table head -->
+      <thead>
+        <tr>
+          <th>
+            <!-- Default unchecked -->
+            <div class="custom-control custom-checkbox">
+              <label class="custom-control-label" for="markClose">Mark Close</label>
+            </div>
+          </th>
+          <th scope="col">Id</th>
+          <th scope="col">Enrollment No</th>
+          <th scope="col">Name</th>
+          <th scope="col">Category</th>
+          <th scope="col">Subject</th>
+          <th scope="col">Grievance</th>
+        </tr>
+      </thead>
+      <!-- Table head -->
+
+      <!-- Table body -->
+      <tbody></tbody>
+      <!-- Table body -->
+    </table>
+	</div>
+			</div>
+		</div>
+	</div>
+    <!-- Table  -->
+    <div class="submit">
+      <p>
+        <button class="btn btn-default" type="submit" id="submitButton">
+          Submit
+        </button>
+      </p>
+    </div>
+    <!--footer-->
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="footer-heading">
+              <h3><span>ABOUT US</span></h3>
+              <h4>SHREE KRISHNA EDUCATIONAL TRUST</h4>
+              <img src="images/about/about3.jpg" alt="" />
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="footer-heading">
+              <h3><span>NEWS</span></h3>
+              <ul>
+                <li><a href="#">Navratri Celebration</a></li>
+                <li><a href="#">Ganpati Utsav</a></li>
+                <li><a href="#">Aahvan</a></li>
+                <li><a href="#">Xitij-Youth Festival</a></li>
+                <li><a href="#">Sports Week</a></li>
+                <li><a href="#">Project Exhibitions</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="footer-heading">
+              <h3><span>COURSES PROVIDED</span></h3>
+              <div class="insta">
+                <ul>
+                  <li><a href="https://bitstechnology.org">Engineering</a></li>
+                  <ul>
+                    <li>
+                      <a
+                        href="https://bitstechnology.org/computer-science-engineering/"
+                        >Computer Science and Engineering</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://bitstechnology.org/mechanical-engineering/"
+                        >Mechanical Engineering</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://bitstechnology.org/electrical-engineering/"
+                        >Electrical Engineering</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://bitstechnology.org/civil-engineering/"
+                        >Civil Engineering</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://bitstechnology.org/electronics-communication/"
+                        >Electronics and Communication Engineering</a
+                      >
+                    </li>
+                  </ul>
+                </ul>
+                <ul>
+                  <li><a href="https://bitspharmacy.org/">Pharmacy</a></li>
+                  <li>
+                    <a href="https://bitsphysiotherapy.org/">Physiotherapy</a>
+                  </li>
+                  <li><a href="">BHMS</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--bottom footer-->
+    <div id="bottom-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="footer-left">
+              <div class="credits">Designed By <a>TEAM EnIgma</a></div>
+            </div>
+          </div>
+
+          <div class="col-md-8">
+            <div class="footer-right">
+              <ul class="list-unstyled list-inline pull-right">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="registration.html">register</a></li>
+                <li><a href="index.html#gotologin">Login</a></li>
+                <li><a href="index.html#gotocontact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/jquery.inview.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/admin.js"></script>
+    <script type="text/javascript">
+      $("#submitButton").click(function() {
+        getSelected();
+      });
+
+	  $(window).on("load resize ", function() {
+	  var scrollWidth = $('thead').width() - $('td').width();
+	  $('thead').css({'padding-right':scrollWidth});
+	  }).resize();
+    </script>
+  </body>
+</html>
